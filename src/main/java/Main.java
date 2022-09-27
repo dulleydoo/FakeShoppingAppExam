@@ -12,13 +12,12 @@ public class Main {
         Manager manager1 = new Manager("Steve", managerCart, 'M');
 
 
-        Clothing[] employeeCart = {shirt, pants, boxers};
+        Clothing[] employeeCart = {shirt, pants, boxers,};
         HourlyEmployee employee1 = new HourlyEmployee("Josh", employeeCart, 'M');
 
+        System.out.println(shopApp.calcTotal(managerCart));
 
-        //System.out.println(shopApp.calcTotal(managerCart));
-
-        System.out.println("This " +shirt + " is " + shopApp.isAFit(manager1, shirt));
+        System.out.println("This " + shirt + " is " + shopApp.isAFit(manager1, shirt));
 
         employee1.printEmpPriceAfterDisc(shirt);
         employee1.printEmpPriceAfterDisc(pants);
@@ -26,11 +25,16 @@ public class Main {
         manager1.printEmpPriceAfterDisc(shirt);
         manager1.printEmpPriceAfterDisc(pants);
 
-        ArrayList<Clothing> listOfNames1 = new ArrayList<>();
-        listOfNames1.add(shirt);
-        listOfNames1.add(pants);
-        listOfNames1.add(boxers);
+        ArrayList<Clothing> listOfClothes = new ArrayList<>();
+        listOfClothes.add(shirt);
+        listOfClothes.add(pants);
+        listOfClothes.add(boxers);
 
+        for (Clothing clothes : listOfClothes) {
+            System.out.println(clothes);
+        }
 
+        shopApp.printEmployeeName(employee1);
+        shopApp.printEmployeeName(manager1);
     }
 }

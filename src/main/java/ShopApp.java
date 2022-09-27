@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class ShopApp {
     public static double calcTotal(Clothing[] clothes) {
         int i;
-        for (i = 0; i < clothes.length; i++) {
+        for (i = 0; i < clothes.length-1; i++) {
         }return (clothes[i].getPrice());
     }
     public static boolean isAFit(Customer customer, Clothing clothe){
@@ -22,7 +22,7 @@ public class ShopApp {
         System.out.println(employee.getName());
 
     }
-    public static void DiscAmtOff(Discountable[] discountables, Clothing clothe){
+    public static void discAmtOff(Discountable[] discountables, Clothing clothe){
         for (int i = 0; i < discountables.length;i++ )
             System.out.println(discountables[i].calcDiscount(clothe));
 
