@@ -14,6 +14,7 @@ public class HourlyEmployee extends Employee implements Discountable {
 
 
 
+
     @Override
     public double calcDiscount(Clothing clothe) {
         return clothe.getPrice() * getDiscount();
