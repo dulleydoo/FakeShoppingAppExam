@@ -1,5 +1,4 @@
 public class HourlyEmployee extends Employee implements Discountable {
-    private final double discount = .1;
 
 
     public HourlyEmployee(String name, Clothing[] clothingItem, char size) {
@@ -9,7 +8,7 @@ public class HourlyEmployee extends Employee implements Discountable {
     @Override
     public String toString() {
         return "HourlyEmployee{" +
-                "discount=" + discount +
+                "discount=" + getDiscount() +
                 '}';
     }
 

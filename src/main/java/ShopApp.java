@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ShopApp {
     public static double calcTotal(Clothing[] clothes) {
@@ -12,11 +13,17 @@ public class ShopApp {
         if (customer.getSize() == clothe.getSize()) {
             return true;
         }
-        else {
             return false;
         }
-    }
+
     public static void sortAndPrintClothingByPrice(ArrayList<Clothing> clothe){
+        //sort
+        Collections.sort(clothe, new SortingComparator());
+        for(Clothing c: clothe){
+            System.out.println(c.getPrice());
+        }
+        //Collections.sort(clothe);
+        //loop through and printing the price for each one
 
 
     }

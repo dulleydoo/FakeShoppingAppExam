@@ -1,11 +1,12 @@
-public class Clothing extends Customer{
+public class Clothing {
     private String description;
     private double price;
+    private char size;
 
-    public Clothing(String name, char size, String description, double price) {
-        super(name, size);
+    public Clothing(String description, char size, double price) {
         this.description = description;
         this.price = price;
+        this.size = size;
     }
 
     public String getDescription() {
@@ -24,8 +25,11 @@ public class Clothing extends Customer{
         this.price = price;
     }
 
-    @Override
-    public String toString() {
-        return getName();
+    public char getSize() {
+        return size;
+    }
+
+    public void setSize(char size) {
+        this.size = size;
     }
 }

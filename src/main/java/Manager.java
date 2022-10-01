@@ -1,5 +1,5 @@
 public class Manager extends Employee implements Discountable{
-    private final double discount = .25;
+    private final double DISCOUNT = .25;
 
 
     public Manager(String name, Clothing[] clothingItem, char size) {
@@ -8,19 +8,19 @@ public class Manager extends Employee implements Discountable{
 
     @Override
     public double getDiscount() {
-        return discount;
+        return DISCOUNT;
     }
 
     @Override
     public String toString() {
         return "Manager{" +
-                "discount=" + discount +
+                "discount=" + DISCOUNT +
                 '}';
     }
 
     @Override
     public double calcDiscount(Clothing clothe) {
-        return clothe.getPrice() * getDiscount();
+        return clothe.getPrice() * DISCOUNT;
 
     }
     @Override
